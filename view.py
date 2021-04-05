@@ -44,13 +44,17 @@ class MainUI(QtWidgets.QWidget):
         self.cancel_bt.clicked.connect(self.close)
 
     def choose_file(self):
-        txt_file, _ = QtWidgets.QFileDialog.getOpenFileName()
+        txt_file, _ = QtWidgets.QFileDialog.getOpenFileName(self)
         if txt_file:
             self.path_input.setText(txt_file)
 
     def run_retime(self):
-        mod = self.type_choose.currentText()
+        typ = self.type_choose.currentText()
         node_path = self.path_input.text()
-        task = retime_mod.DoRetime(node_path, mod)
+        task = retime_mod.CurvesRetime(node_path, typ)
         task.do_retime()
+        self.done_message()
+
+    def done_message(self):
+        QtWidgets.QMessageBox.information(self, 'information', 'Done!')
 

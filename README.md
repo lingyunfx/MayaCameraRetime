@@ -12,6 +12,4 @@ MayaCameraRetime.main()
 
 ![](doc_image/tool_ui.jpg)
 
-4.Select all the animated objects and click the Run button.
-
-![](doc_image/outline.jpg)
+4.Select the retime txt file and run it.
