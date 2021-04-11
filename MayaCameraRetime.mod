@@ -1,0 +1,2 @@
++ MayaCameraRetime maya ./MayaCameraRetime
+ PYTHONPATH +:= ./
