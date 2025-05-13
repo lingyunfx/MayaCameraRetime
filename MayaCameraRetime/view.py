@@ -25,9 +25,9 @@ class MainUI(QtWidgets.QWidget):
                    (self.run_bt, self.cancel_bt))
         layouts = (self.top_la, self.button_la)
 
-        map(lambda widget: self.top_la.addWidget(widget), widgets[0])
-        map(lambda widget: self.button_la.addWidget(widget), widgets[1])
-        map(lambda layout: self.layout.addLayout(layout), layouts)
+        list(map(lambda widget: self.top_la.addWidget(widget), widgets[0]))
+        list(map(lambda widget: self.button_la.addWidget(widget), widgets[1]))
+        list(map(lambda layout: self.layout.addLayout(layout), layouts))
         self.adjust_ui()
         self.connect_cmd()
 
