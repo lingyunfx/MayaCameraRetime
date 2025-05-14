@@ -121,7 +121,7 @@ class CurvesRetime(object):
         """
         Set keyframes for all animation curves of a specified number of frames.
         """
-        for curve, values in self.animation_data.iteritems():
+        for curve, values in self.animation_data.items():
             value = self.retime_method(values, linked_frame, decimal)
             pm.setKeyframe(curve, time=frame, value=value)
 
